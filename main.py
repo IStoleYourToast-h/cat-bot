@@ -848,7 +848,7 @@ async def spawn_cat(ch_id, localcat=None, force_spawn=None):
         return
 
     if message_is_sus.channel.id != int(ch_id):
-        # user changed the webhook destination, panic mode
+        # user changed the webhook destination, panik mode
         if thread_id:
             await channeley.send(
                 "uh oh spaghettio you changed webhook destination and idk what to do with that so i will now self destruct do /setup to fix it",
@@ -4002,7 +4002,7 @@ async def trade(message: discord.Interaction, person_id: discord.User):
                 self.currentuser == 2 and user2[f"cat_{cname}"] < int(value) + currset
             ):
                 await interaction.response.send_message(
-                    "hell naww dude you dont even have that many cats 💀💀💀",
+                    "hell naww broo you dont even have that many cats 💀💀💀",
                     ephemeral=True,
                 )
                 return
@@ -4126,6 +4126,7 @@ async def casino(message: discord.Interaction):
         variants = [
             f"{get_emoji('egirlcat')} 1 eGirl cats",
             f"{get_emoji('egirlcat')} 3 eGirl cats",
+            f"{get_emoji('egirlcat')} 1000 eGirl cats",
             f"{get_emoji('ultimatecat')} 2 Ultimate cats",
             f"{get_emoji('corruptcat')} 7 Corrupt cats",
             f"{get_emoji('divinecat')} 4 Divine cats",
@@ -4174,7 +4175,7 @@ async def casino(message: discord.Interaction):
         try:
             await interaction.edit_original_response(embed=embed, view=myview)
         except Exception:
-            await interaction.followup.send(embed=embed, view=myview)
+            await interaction.followdown.send(embed=embed, view=myview)
 
     button = Button(label="Spin", style=ButtonStyle.blurple)
     button.callback = spin
